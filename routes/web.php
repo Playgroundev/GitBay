@@ -19,6 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/items',function(){
-    return view('items_add');
+Route::get('/items','ItemsController@addItems');
+
+Route::post('/items','ItemsController@ListItems');
+
+Route::get('/search',function(){
+   return view('search');
 });

@@ -6,7 +6,7 @@
             <div class="panel-heading">Add New Item</div>
             <div class="panel-body">
                 @include('includes.flash')
-                <form class="form-horizontal" role="form" method="POST" action="{{url('/')}}">
+                <form class="form-horizontal" role="form" method="POST" action="{{url('/items')}}">
                     {!! csrf_field() !!}
 
                     <div class="form-group{{ $errors->has('item_name') ?'has-error':''}}">
@@ -36,13 +36,14 @@
                         <label for="category" class="col-md-4 control-label">Category</label>
                         <div class="col-md-6">
                             <select id="category" class="form-control" name="category">
-                                <option value="">Art</option>
-                                <option value="">Books</option>
-                                <option value="">Electronics</option>
-                                <option value="">Home & Garden</option>
-                                <option value="">Sporting Goods</option>
-                                <option value="">Toys</option>
-                                <option value="">Others</option>
+                                <option>Select Any Of the Options</option>
+                                <option>Art</option>
+                                <option>Books</option>
+                                <option>Electronics</option>
+                                <option>Home & Garden</option>
+                                <option>Sporting Goods</option>
+                                <option>Toys</option>
+                                <option>Others</option>
                             </select>
                         </div>
                     </div>
@@ -50,11 +51,12 @@
                         <label for="condition" class="col-md-4 control-label">Condition</label>
                         <div class="col-md-6">
                             <select id="condition" class="form-control" name="condition" required>
-                                <option value="">New</option>
-                                <option value="">Very Good</option>
-                                <option value="">Good</option>
-                                <option value="">Fair</option>
-                                <option value="">Poor</option>
+                                <option>Select Any Of the Options</option>
+                                <option>New</option>
+                                <option>Very Good</option>
+                                <option>Good</option>
+                                <option>Fair</option>
+                                <option>Poor</option>
                             </select>
                         </div>
                     </div>
@@ -72,10 +74,10 @@
                         </div>
                     </div>
                     <div class="form-group{{ $errors->has('minimum_price') ? ' has-error' : '' }}">
-                        <label for="min_price" class="col-md-4 control-label">Minimum Sale Price $</label>
+                        <label for="minimum_price" class="col-md-4 control-label">Minimum Sale Price $</label>
 
                         <div class="col-md-6">
-                            <input id="min_price" type="number" class="form-control" name="price" min="5" required>
+                            <input id="minimum_price" type="number" class="form-control" name="minimum_price" min="5" required>
 
                             @if ($errors->has('min_price'))
                                 <span class="help-block">
@@ -87,19 +89,20 @@
                     <div class="form-group{{ $errors->has('end_day')?'has-error':''}}">
                         <label for="end_day" class="col-md-4 control-label">Auction Ends In</label>
                         <div class="col-md-6">
-                            <select id="end_day" class="form-control" name="condition" required>
-                                <option value="">1 day</option>
-                                <option value="">3 days</option>
-                                <option value="">5 days</option>
-                                <option value="">7 days</option>
+                            <select id="end_day" class="form-control" name="end_day" required>
+                                <option>Select Any Of the Options</option>
+                                <option>1 day</option>
+                                <option>3 days</option>
+                                <option>5 days</option>
+                                <option>7 days</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group{{ $errors->has('inst_price') ? ' has-error' : '' }}">
-                        <label for="inst_price" class="col-md-4 control-label">Get it Not At $</label>
+                        <label for="inst_price" class="col-md-4 control-label">Get it Now At $</label>
 
                         <div class="col-md-6">
-                            <input id="inst_price" type="number" class="form-control" name="price" min="5" required>
+                            <input id="inst_price" type="number" class="form-control" name="inst_price" min="5" required>
 
                             @if ($errors->has('inst_price'))
                                 <span class="help-block">
@@ -111,9 +114,10 @@
                     <div class="form-group{{ $errors->has('returns')?'has-error':''}}">
                         <label for="returns" class="col-md-4 control-label">Returns Accepted ?</label>
                         <div class="col-md-6">
-                            <select id="returns" class="form-control" name="condition" required>
-                                <option value="">Yes</option>
-                                <option value="">No</option>
+                            <select id="returns" class="form-control" name="returns" required>
+                                <option>Select Any Of the Options</option>
+                                <option>Yes</option>
+                                <option>No</option>
                             </select>
                         </div>
                     </div>
