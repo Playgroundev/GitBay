@@ -6,6 +6,9 @@
             <div class="panel-heading">
                     <input type="text" style="width: 225px" class="form-control" placeholder="Enter item to Search 😊" >
             </div>
+           <div class="panel-body">
+               <table class="table table-responsive"
+           </div>
        </div>
 
    </div>
